@@ -40,7 +40,8 @@
 				if (ph.isEmpty(this.value)) {
 
 					if ($(this).attr('type') === 'password') {
-						$(this).hide().next('input').show();
+						$(this).hide()
+							.next('input').show();
 					} else {
 
 						$(this).css('color', "#aaa");
@@ -57,14 +58,19 @@
 				}
 			},
 			focusPassword: function() {
-				passwordField = $(this).hide().prev('input').show();
+				passwordField = $(this).hide()
+					.prev('input').show();
 
+				//IE's hack
 				setTimeout(function() {
 					passwordField.trigger('focus');
 				}, 50);
 			},
 			preparePasswordPlaceholder: function(self) {
-				hiddenPassword = $($('<div>').append(self.clone()).html().replace(/type=["]?password["]?/, 'type="text"')).addClass('placeholder-password').removeAttr('id').removeAttr('name').removeClass('placeholder');
+				hiddenPassword = $($('<div>').append(self.clone()).html().replace(/type=["]?password["]?/, 'type="text"'))
+					.addClass('placeholder-password')
+					.removeAttr('id name')
+					.removeClass('placeholder');
 
 				self.hide().after(hiddenPassword);
 
@@ -72,7 +78,9 @@
 			},
 			preparePlaceholder: function(self) {
 
-				self.val(self.attr('placeholder')).data('placeholder-old-color', self.css('color')).css("color", "#aaa");
+				self.val(self.attr('placeholder'))
+					.data('placeholder-old-color', self.css('color'))
+					.css("color", "#aaa");
 
 				return self;
 			}
@@ -80,7 +88,11 @@
 		};
 
 		// Events
-		$(document.body).on('focusin.placeholder', '.placeholder', ph.focusin).on('focusout.placeholder', '.placeholder', ph.focusout).on('focus.placeholder', '.placeholder-password', ph.focusPassword).on('submit.placeholder', 'form', ph.clearPlaceholders);
+		$(document.body)
+			.on('focusin.placeholder', '.placeholder', ph.focusin)
+			.on('focusout.placeholder', '.placeholder', ph.focusout)
+			.on('focus.placeholder', '.placeholder-password', ph.focusPassword)
+			.on('submit.placeholder', 'form', ph.clearPlaceholders);
 
 		// Init
 		return fields.each(function() {
