@@ -16,7 +16,7 @@
 
 		// Native placeholder feature detect
 		if ('placeholder' in document.createElement('input')) {
-			return false;
+			return this;
 		}
 
 		// Vars
