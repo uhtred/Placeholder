@@ -1,9 +1,12 @@
 /*!
  * jQuery Placeholder Plugin v1.0
- * http://drfranca.com.br/
  *
- * Copyright (C) 2012 Daniel França
- * Licensed under the MIT license
+ * code: https://github.com/uhtred/Placeholder
+ *
+ * Copyright (C) 2012 Daniel França(drfranca.com.br)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
  *
  * Author: Daniel Ribeiro França
  */
