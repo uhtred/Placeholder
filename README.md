@@ -1,4 +1,4 @@
-PLaceholder jQuery Plugin
+Placeholder jQuery Plugin
 ====================
 
 How to use
