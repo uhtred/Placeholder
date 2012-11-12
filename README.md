@@ -11,6 +11,6 @@ Roadmap
 
 Create refresh function, for elements which are not already there.
 
-keep id and name attributes, replacing them by temp namespaces.
+keep id and name attributes, replacing them by temporary namespaces.
 
 
